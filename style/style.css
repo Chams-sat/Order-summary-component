@@ -1,0 +1,154 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+
+/* Primary */
+
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+
+/* Neutral */
+
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-image: url("/images/pattern-background-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 400px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: var(--Very-pale-blue);
+    border-radius: 1em;
+    box-shadow: 0px 14px 30px -14px rgba(66, 68, 90, 1);
+}
+
+.card .image-sec img {
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    width: 100%;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+.info h1 {
+    font-weight: 900;
+}
+
+.info p {
+    color: var(--Desaturated-blue);
+    line-height: 1.6em;
+}
+
+.box {
+    background-color: hsl(225deg 99.37% 96.78%);
+    width: 95%;
+    border-radius: .8em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    margin-left: -3.5em;
+    line-height: 1.5em;
+}
+
+.price b {
+    font-weight: 900;
+}
+
+.change a {
+    font-weight: 900;
+    color: var(--Bright-blue);
+}
+.change a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(245deg 66.54% 71.73%);
+}
+
+.btn {
+    width: 95%;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 1em;
+    border: none;
+    border-radius: .8em;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: hsl(245deg 84.81% 71.46%);
+}
+
+.cancel a {
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--Desaturated-blue);
+}
+.cancel a:hover {
+    cursor: pointer;
+    color: var(--Dark-blue);
+}
+
+@media screen and (max-width:450px) {
+    body {
+        position: relative;
+        background-image: url("/images/pattern-background-mobile.svg");
+    }
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        max-width: 80%
+    }
+    .price {
+        margin-left: .3em;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+    
+}
